@@ -1,0 +1,23 @@
+section {
+  border-radius: 8px;
+  margin: 20px 0 20px 0;
+  padding: 30px 30px 10px 20px;
+  display: inline-block;
+  clear: both;
+  background-color: rgba(2, 39, 63, 0.5);
+  position: relative;
+  z-index: 5;
+}
+
+#usage-outer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap`;
+  text-align: center;
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  width: 960px;
+}

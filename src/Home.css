@@ -1,0 +1,26 @@
+.logo {
+  text-shadow: #cce4f4 0px 0px 10px, #cce4f4 0 0 60px;
+  margin: 0px;
+  padding: 0;
+  color: #02273f;
+  text-transform: uppercase;
+  font-family: museo_sans, 'Lucida Grande', 'Lucida Sans', 'Helvetica',
+    sans-serif;
+  font-weight: bold;
+  font-size: 5em;
+}
+.logo #second-word {
+  text-shadow: #02273f 0px 0px 10px;
+  color: #cce4f4;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+#tagline {
+  text-shadow: #02273f 0px 0px 5px;
+  margin: 0px;
+  font-size: 1.6em;
+  font-style: italic;
+  color: white;
+}
