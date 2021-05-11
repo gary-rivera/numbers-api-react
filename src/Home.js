@@ -1,10 +1,10 @@
 import './Home.css';
-import CategoryContainer from './CategoryContainer';
-import SandboxContainer from './SandboxContainer';
+import CategoryContainer from './Category/CategoryContainer';
+import SandboxContainer from './Sandbox/SandboxContainer';
 
 function Home() {
   return (
-    <div>
+    <div className="body-container">
       <header>
         <h1 
           className="logo"> Numbers <span id="second-word">API</span>

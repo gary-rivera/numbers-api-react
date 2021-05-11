@@ -1,5 +1,4 @@
 .App {
-  background: url('img/background.jpg');
+  background: url('/src/img/graph-paper-5.png');
   min-height: 100vh;
-  min-width: 100%;
 }
