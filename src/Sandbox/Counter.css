@@ -1,8 +1,29 @@
-#counter {
+.counter-container {
+  touch-action: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  outline: 1px solid white;
+  width: 100px;
+  height: 75px;
   display: inline-block;
   margin-top: 5px;
   margin-right: 12px;
-  padding: 3px 0px;
-  float: left;
-  border-radius: 5px 5px;
+}
+
+.number {
+  height: 25px;
+  text-align: center;
+  outline: 1px solid red;
+}
+.increment {
+  height: 25px;
+  text-align: center;
+  outline: 3px solid green;
+}
+.decrement {
+  height: 25px;
+  text-align: center;
+  outline: 3px solid green;
 }

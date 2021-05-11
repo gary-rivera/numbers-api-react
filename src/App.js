@@ -2,7 +2,6 @@ import './App.css';
 import Home from './Home'
 import NumberContext from "./NumberContext";
 import { useEffect, useMemo, useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
   }
 
   return (
-    <NumberContext.Provider value={{ currNumber, updateCurrNumber }}>
+    <NumberContext.Provider value={{ currNumber, setCurrNumber }}>
     <div className="App">   
       <Home />
     </div>
