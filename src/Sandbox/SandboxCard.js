@@ -1,22 +1,32 @@
 import './SanboxCard.css';
 import Counter from './Counter';
+import { useContext } from 'react';
+import NumberContext from '../NumberContext';
 
 function SandboxCard() {
-  let fact = 'Please enable JavaScript to use this API browser.'
+  const {currNumberString, numFact, setCurrNumberString, updateCurrNumberString} = useContext(NumberContext);
+  
+  function handleChange(evt) {
+    let value = evt.target.value;
+    setCurrNumberString(() => value)
+  }
+  
+  function handleEnter(evt) {
+    if(evt.key === 'Enter') {
+      updateCurrNumberString(currNumberString)
+    }
+  }
 
   return (
     <div className="outer-search">
       <div className="search-box">
         <div id="search-box">
           <label><a id="search-link">numbersapi.com/</a></label>
-            <span><input id="search-text" type="text" /></span>
+            <span><input id="search-text" type="text" value={currNumberString} onChange={handleChange} onKeyDown={handleEnter}/></span>
           </div>
           <div id="search-result" className="api-result">
-            <div id="counter">
-              <Counter />
-            </div>
             <span id="result-temporary-text">
-            {fact}
+            {numFact}
             </span>
           </div>
         <div/>
