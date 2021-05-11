@@ -1,28 +1,15 @@
-#usage .example {
+.example {
   width: 260px;
   margin: 0 20px 0 20px;
   padding-bottom: 10px;
   display: inline-block;
 }
-#usage .example h2 {
+
+.example h2 {
   margin-bottom: 10px;
 }
-#usage .example .example-box {
-  width: 250px;
-  height: 125px;
-  display: inline-block;
-  vertical-align: top;
-}
-#usage .example .example-box a {
-  border-radius: 5px 5px 0 0;
-  background-color: #02273f;
-  background: url(/img/grainy-opacity-80.png);
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0.25em;
-}
-#usage .example .example-box .api-result {
+
+.example .example-box .api-result {
   border-radius: 0 0 5px 5px;
   background-color: rgba(30, 109, 160, 0.5);
   background: radial-gradient(
@@ -38,4 +25,36 @@
   border-top: 0;
   padding: 8px;
   height: 5em;
+}
+
+.api-result {
+  position: relative;
+  color: white;
+  overflow: auto; }
+  .api-result .result-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border-radius: 5px;
+    background: linear-gradient(to top, rgba(30, 109, 160, 0) 0%, rgba(30, 109, 160, 0.5) 80%, #1e6da0 100%); }
+
+
+.example-box {
+  width: 250px;
+  height: 125px;
+  display: inline-block;
+  vertical-align: top; 
+}
+
+.example-box a {
+    border-radius: 5px 5px 0 0;
+    background-color: #02273f;
+    background: url('img/grainy-opacity-80.png');
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.25em; 
+    color: #86c9f4;
+    text-decoration: none;
 }

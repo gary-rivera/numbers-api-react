@@ -1,5 +1,6 @@
 import './Home.css';
 import CategoryContainer from './CategoryContainer';
+import SandboxContainer from './SandboxContainer';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         </h3>
       </header>
       <CategoryContainer />
+      <SandboxContainer/>
     </div>
   )
 }

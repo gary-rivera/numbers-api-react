@@ -5,9 +5,9 @@ function CategoryContainer() {
   return (
     <section id="usage-outer"> 
       <div id="usage">
-        <CategoryCard title="MATH"/>
-        <CategoryCard title="TRIVIA"/>
-        <CategoryCard title="DATE"/>
+        <CategoryCard title="math"/>
+        <CategoryCard title="trivia"/>
+        <CategoryCard title="date"/>
       </div>
     </section>
   )
