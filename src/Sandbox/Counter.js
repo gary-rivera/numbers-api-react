@@ -11,14 +11,10 @@ function Counter() {
     setCurrNumber((num) => num +=1);
   }
 
-  function sayHi() {
-    console.log('hi');
-  }
   return (
     <div className="counter-container" 
       onWheel={handleScroll}>
-      {/* // onClick={sayHi}> */}
-        <div className="increment">▲</div>
+          <div className="increment">▲</div>
         <div className="number"> {currNumber} </div>
         <div className="decrement">▼</div>
     </div>

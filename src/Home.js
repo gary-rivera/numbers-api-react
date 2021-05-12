@@ -1,12 +1,15 @@
 import './Home.css';
 import CategoryContainer from './Category/CategoryContainer';
 import SandboxContainer from './Sandbox/SandboxContainer';
+import Footer from './Footer';
+import APIDocumentation from './APIDocumentation';
 import {useParams} from 'react-router-dom'
 
 function Home() {
 
   const { string } = useParams()
   console.log("PARAM", string)
+  console.log("usePARAMS", useParams())
 
   return (
     <div className="body-container">
@@ -20,6 +23,8 @@ function Home() {
       </header>
       <CategoryContainer />
       <SandboxContainer/>
+      <Footer/>
+      <APIDocumentation/>
     </div>
   )
 }

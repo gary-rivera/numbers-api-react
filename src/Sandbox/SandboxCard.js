@@ -21,7 +21,7 @@ function SandboxCard() {
     <div className="outer-search">
       <div className="search-box">
         <div id="search-box">
-          <label><a id="search-link">numbersapi.com/</a></label>
+          <label><a href="#" id="search-link">numbersapi.com/</a></label>
             <span><input id="search-text" type="text" value={currNumberString} onChange={handleChange} onKeyDown={handleEnter}/></span>
           </div>
           <div id="search-result" className="api-result">

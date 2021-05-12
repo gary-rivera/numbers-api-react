@@ -3,11 +3,13 @@ import Home from "./Home"
 
 
 function Routes() {
-  
   return (
     <div>
       <Switch>
-        <Route path="/@:string"><Home/></Route>
+        <Route path={`/fact:parameter`}><Home/></Route>
+        <Route path='/'>
+          <Redirect to='/fact42'/>
+        </Route>
       </Switch>
     </div>
   )
