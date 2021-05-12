@@ -1,9 +1,10 @@
 import './App.css';
-import Home from './Home'
 import NumberContext from "./NumberContext";
 import { useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import Api from './Api'
+import Routes from './Routes'
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
@@ -17,11 +18,13 @@ function App() {
   }
 
   return (
-    <NumberContext.Provider value={{ currNumberString, numFact, setCurrNumberString, updateCurrNumberString }}>
-    <div className="App">   
-      <Home />
-    </div>
-    </NumberContext.Provider>
+    <BrowserRouter>
+      <NumberContext.Provider value={{ currNumberString, numFact, setCurrNumberString, updateCurrNumberString }}>
+        <div className="App">   
+          <Routes />
+        </div>
+      </NumberContext.Provider>
+    </BrowserRouter>
   );
 }
 

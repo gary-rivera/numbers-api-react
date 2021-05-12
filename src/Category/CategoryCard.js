@@ -7,16 +7,16 @@ function CategoryCard(props) {
   let type = props.title;
 
   function generateHref() {
-    if(type === "math") return `${BASE_URL}/5/${type}`;
-    if(type === 'trivia') return `${BASE_URL}/42`;
-    if(type === 'date') return `${BASE_URL}/5/10/${type}`
+    if(type === "math") return `5/${type}`;
+    if(type === 'trivia') return `42`;
+    if(type === 'date') return `5/10/${type}`
   }
 
   return (
     <div className="example"> 
       <h2>{type}</h2>
       <div className="example-box">
-        <a href="#">{generateHref()}</a>
+        <a href={generateHref()}>{`${BASE_URL}/${generateHref()}`}</a>
         <div className="api-result scroll">
           {props.facts[type]}
         </div>
