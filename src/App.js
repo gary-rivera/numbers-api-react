@@ -1,16 +1,22 @@
 import './App.css';
 import NumberContext from "./NumberContext";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Api from './Api'
 import Routes from './Routes'
 import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
-  const [numFact, setNumFact] = useState("42 is the angle in degrees for which a rainbow appears or the critical angle.")
-  const [currNumberString, setCurrNumberString] = useState("42");
+  const string = window.location.pathname.substr(6)
+  const [numFact, setNumFact] = useState(null)
+  const [currNumberString, setCurrNumberString] = useState(string || 42);
   // const [category, setCategory] = useState(null);
+  console.log("Current", currNumberString)
 
+  useEffect(function updateString() {
+    updateCurrNumberString(currNumberString);
+  }, [])
+  
   async function updateCurrNumberString(val) {
     let resp = await Api.getNumberFact(val);
     setNumFact(() => resp)

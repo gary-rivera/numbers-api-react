@@ -5,11 +5,14 @@ import Footer from './Footer';
 import APIDocumentation from './APIDocumentation';
 import {useParams} from 'react-router-dom'
 
+const PARAM_STARTING_INDEX = 6
+
 function Home() {
 
-  const { string } = useParams()
-  console.log("PARAM", string)
-  console.log("usePARAMS", useParams())
+  const pathname = window.location.pathname;
+  // Removing the "/fact/" from the pathname
+  const string = pathname.substr(PARAM_STARTING_INDEX)
+
 
   return (
     <div className="body-container">
