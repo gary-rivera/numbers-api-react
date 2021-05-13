@@ -30,7 +30,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NumberContext.Provider value={{ currNumberString, numFact, updateCurrNumberString }}>
+      <NumberContext.Provider value={{ currNumberString, numFact, setCurrNumberString, updateCurrNumberString }}>
         <div className="App">
           <Routes />
         </div>

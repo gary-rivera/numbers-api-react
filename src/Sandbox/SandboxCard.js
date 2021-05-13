@@ -18,7 +18,6 @@ function SandboxCard() {
       window.history.replaceState({}, document.title, `/fact/${value}`)
     }
   }
-  console.log("NUMFACT", numFact)
   return (
     <div className="outer-search">
       <div className="search-box">

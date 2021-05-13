@@ -4,25 +4,19 @@ import { useContext, useState } from 'react';
 const leapYear = 2020;
 
 function Counter() {
-  const { numFact, updateCurrNumberString } = useContext(NumberContext)
+  const { numFact, updateCurrNumberString, setCurrNumberString } = useContext(NumberContext)
   const [formValue, setFormValue] = useState(numFact.number)
   const category = numFact.type;
 
   function handleChange(evt) {
-    // console.log(evt);
     const { value } = evt.target;  
     if(numFact.type === 'date') {
-      let date = dateFromDay(leapYear, numFact.number);
-      console.log('DATE', date)
-
+      let date = dateFromDay(leapYear, value);
       updateCurrNumberString(`${date}/${category}`, true)
     }
     else  {
-      // console.log('here')
       updateCurrNumberString(`${value}/${category}`, true)
     }
-    // console.log("FORM VALUE", formValue)
-    // setFormValue(formValue => ({...formValue, value}));
   }
 
   function dateFromDay(year, day){
