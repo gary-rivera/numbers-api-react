@@ -1,19 +1,22 @@
 import './SanboxCard.css';
 import Counter from './Counter';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import NumberContext from '../NumberContext';
 
 function SandboxCard() {
-  const {currNumberString, numFact, setCurrNumberString, updateCurrNumberString} = useContext(NumberContext);
-  
+  const {currNumberString, numFact, updateCurrNumberString} = useContext(NumberContext);
+  const [formValue, setFormValue] = useState(currNumberString)
+
   function handleChange(evt) {
-    let value = evt.target.value;
-    setCurrNumberString(() => value)
+    const {value} = evt.target
+    setFormValue(formValue => ({...formValue, value}))
   }
   
   function handleEnter(evt) {
     if(evt.key === 'Enter') {
-      updateCurrNumberString(currNumberString)
+      let value = evt.target.value
+      updateCurrNumberString(formValue, true)
+      window.history.replaceState({}, document.title, `/fact/${value}`)
     }
   }
 

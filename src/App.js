@@ -11,20 +11,25 @@ function App() {
   const [numFact, setNumFact] = useState(null)
   const [currNumberString, setCurrNumberString] = useState(string || 42);
   // const [category, setCategory] = useState(null);
-  console.log("Current", currNumberString)
+  
 
   useEffect(function updateString() {
     updateCurrNumberString(currNumberString);
   }, [])
   
-  async function updateCurrNumberString(val) {
-    let resp = await Api.getNumberFact(val);
-    setNumFact(() => resp)
+  async function updateCurrNumberString(val, action=false) {
+    if(currNumberString !== val) {
+      setCurrNumberString(val);
+    }
+    if(action || !numFact) {
+      let resp = await Api.getNumberFact(val);
+      setNumFact(() => resp)
+    }
   }
 
   return (
     <BrowserRouter>
-      <NumberContext.Provider value={{ currNumberString, numFact, setCurrNumberString, updateCurrNumberString }}>
+      <NumberContext.Provider value={{ currNumberString, numFact, updateCurrNumberString }}>
         <div className="App">
           <Routes />
         </div>

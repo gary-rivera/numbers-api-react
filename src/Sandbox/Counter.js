@@ -7,7 +7,6 @@ function Counter() {
 
   function handleScroll(evt) {
     evt.preventDefault();
-    console.log(evt);
     setCurrNumber((num) => num +=1);
   }
 

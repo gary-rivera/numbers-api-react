@@ -3,15 +3,13 @@ import NumberContext from '../NumberContext';
 import './RandomCard.css'
 
 function RandomCard() {
-  const {setCurrNumberString, updateCurrNumberString} = useContext(NumberContext)
+  const {updateCurrNumberString} = useContext(NumberContext)
   
   function handleClick(evt) {
     evt.preventDefault()
     let value = evt.target.innerHTML;
-    console.log(value)
-    setCurrNumberString(() => value);
-    updateCurrNumberString(value);
-    window.history.replaceState(null, "Home", value)
+    updateCurrNumberString(value, true);
+    window.history.replaceState({}, document.title, `/fact/${value}`)
   }
 
   return (

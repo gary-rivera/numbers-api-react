@@ -13,7 +13,6 @@ function Home() {
   // Removing the "/fact/" from the pathname
   const string = pathname.substr(PARAM_STARTING_INDEX)
 
-
   return (
     <div className="body-container">
       <header>
