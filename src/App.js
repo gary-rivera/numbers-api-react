@@ -7,14 +7,13 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
-  const string = window.location.pathname.substr(6)
-  const [numFact, setNumFact] = useState(null)
+  const string = window.location.pathname.substr(6);
+  const [numFact, setNumFact] = useState({});
   const [currNumberString, setCurrNumberString] = useState(string || 42);
-  // const [category, setCategory] = useState(null);
   
 
   useEffect(function updateString() {
-    updateCurrNumberString(currNumberString);
+    updateCurrNumberString(currNumberString, true);
   }, [])
   
   async function updateCurrNumberString(val, action=false) {
@@ -23,6 +22,8 @@ function App() {
     }
     if(action || !numFact) {
       let resp = await Api.getNumberFact(val);
+      // console.log("RESP", resp)
+      // console.log("VAL", val)
       setNumFact(() => resp)
     }
   }
