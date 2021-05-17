@@ -1,6 +1,8 @@
 import './Footer.css'
+const numShares = 15;
 
 function Footer() {
+  
   return (
     <div id="visitors">
       <div className="gradient-fill"></div>
@@ -13,6 +15,9 @@ function Footer() {
           <a href="www.share.com" className="icon addthis_button_compact"> </a>
           <a href="www.count.com" className="icon addthis_counter addthis_bubble_style"> </a>
         </div>
+      </div>
+      <div className="visit-text">
+        This page has been shared more times than the outgoing port for email message submission.
       </div>
       <div className="gradient-fill"></div>
     </div>

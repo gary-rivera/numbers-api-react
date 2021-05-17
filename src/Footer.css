@@ -1,3 +1,7 @@
+#visitors {
+  text-align: center;
+}
+
 .gradient-fill {
   position: relative;
   width: 100%;
@@ -33,4 +37,20 @@
 }
 #addthis .addthis_counter a {
   font-size: 16px;
+}
+
+.visit-text {
+  position: relative;
+  margin: auto;
+  z-index: 10;
+  text-align: center;
+  margin: 15px 0;
+  color: #cce4f4;
+  text-shadow: #000000 0px 1px 0px;
+}
+
+.visit-text:hover {
+  color: rgba(30, 109, 160, 0);
+  transition: all 0.3s ease-out;
+  text-shadow: #000000 0px 1px 0px;
 }

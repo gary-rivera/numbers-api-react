@@ -1,9 +1,16 @@
 import './APIResponse.css'
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import NumberContext from './NumberContext';
+import { useParams } from 'react-router-dom';
 
 function APIResponse() {
-  const {numFact} = useContext(NumberContext);
+  const { parameter } = useParams();
+  const {numFact, updateCurrNumberString} = useContext(NumberContext);
+  
+  useEffect(() => {
+    updateCurrNumberString(parameter, true)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
 
   return (
     <div className="API">{numFact.text}</div>

@@ -2,6 +2,7 @@ import './SanboxCard.css';
 import Counter from './Counter';
 import { useContext } from 'react';
 import NumberContext from '../NumberContext';
+import { Link } from 'react-router-dom';
 
 function SandboxCard() {
   const {currNumberString, numFact, updateCurrNumberString} = useContext(NumberContext);
@@ -22,7 +23,8 @@ function SandboxCard() {
     <div className="outer-search">
       <div className="search-box">
         <div id="search-box">
-          <label><a href="" id="search-link">numbersapi.com/</a></label>
+          <label>
+            <Link to={`/API/${currNumberString}`}>numbersapi.com/</Link></label>
             <span>
               <input 
                 id="search-text" 
