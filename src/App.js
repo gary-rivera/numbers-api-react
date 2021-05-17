@@ -5,16 +5,17 @@ import Api from './Api'
 import Routes from './Routes'
 import { BrowserRouter } from 'react-router-dom';
 
+const stringLength = window.location.pathname.startsWith('/API') ? 5 : 6
 
 function App() {
-  const string = window.location.pathname.substr(6);
-  const [numFact, setNumFact] = useState({});
+  const string = window.location.pathname.substr(stringLength);
+  const [numFact, setNumFact] = useState({text: "", number: 42, type: "trivia"});
   const [currNumberString, setCurrNumberString] = useState(string || 42);
   
 
   useEffect(function updateString() {
     updateCurrNumberString(currNumberString, true);
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
   
   async function updateCurrNumberString(val, action=false) {
     if(currNumberString !== val) {
@@ -22,8 +23,6 @@ function App() {
     }
     if(action || !numFact) {
       let resp = await Api.getNumberFact(val);
-      // console.log("RESP", resp)
-      // console.log("VAL", val)
       setNumFact(() => resp)
     }
   }

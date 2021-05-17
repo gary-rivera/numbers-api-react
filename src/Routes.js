@@ -7,8 +7,8 @@ function Routes() {
   return (
     <div>
       <Switch>
-]       <Route path={`/fact/:parameter`}><Home/></Route>
-        <Route exact path={`/API/:parameter`}><APIResponse/></Route>
+      <Route path={`/fact/:parameter`}><Home/></Route>
+        <Route exact path={`/api/:parameter`}><APIResponse/></Route>
         <Redirect to='/fact/42'/>
       </Switch>
     </div>

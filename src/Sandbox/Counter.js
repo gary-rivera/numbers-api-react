@@ -1,11 +1,10 @@
 import './Counter.css'
 import NumberContext from "../NumberContext"
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 const leapYear = 2020;
 
 function Counter() {
-  const { numFact, updateCurrNumberString, setCurrNumberString } = useContext(NumberContext)
-  const [formValue, setFormValue] = useState(numFact.number)
+  const { numFact, updateCurrNumberString } = useContext(NumberContext)
   const category = numFact.type;
 
   function handleChange(evt) {
