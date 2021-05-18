@@ -2,14 +2,25 @@ import './CategoryCard.css';
 import { useContext } from 'react';
 import NumberContext from '../NumberContext';
 
+/**
+* Card to represent a number category, with a fact and link to update fact
+*
+* Props:
+* - title - category type (i.e. - math, date, trivia)
+* - facts(default): object where each key value is a category and a fact from within that category
+* Context:
+* - updateCurrNumberString
+*
+*  CategoryContainer -> (CategoryCard)
+*/
+
 const BASE_URL = 'numbersapi.com';
-
-
 function CategoryCard(props) {
   let type = props.title;
-  const {updateCurrNumberString} = useContext(NumberContext)
+  const { updateCurrNumberString } = useContext(NumberContext)
   let pathname = generateHref()
 
+  //generate an href for the a tag within the card
   function generateHref() {
     if(type === "math") return `/fact/5/${type}`;
     if(type === 'trivia') return `/fact/42`;
@@ -18,8 +29,10 @@ function CategoryCard(props) {
 
   function handleClick(evt) {
     evt.preventDefault()
+    // parsed path for numstring
     let string = pathname.substr(6)
     updateCurrNumberString(string, true);
+    //updates url to append pathname to end of hostname
     window.history.replaceState({}, document.title, pathname)
   }
 
