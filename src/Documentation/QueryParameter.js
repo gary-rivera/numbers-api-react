@@ -1,10 +1,8 @@
-//import;
-
-function UsageExamples() {
+function QueryParameter() {
   return (
     <div>
-      <h2 id="usage-examples">Usage Examples</h2>
-      <h3 id="jquery">jQuery</h3>
+      <h2 id="usage-examples">Query Parameter Options</h2>
+      <h3 id="fragment">Fragment</h3>
       <div className="Jquery-examples">
         <p>HTML:</p>
         <div className="doc-examples">
@@ -55,9 +53,17 @@ function UsageExamples() {
         </p>
       <h3 id="single-script-tag">HTML Embed</h3>
       <p>Add <code>write</code> to your query string to have the response text wrapped in <code>document.write()</code>. Now you can stick just a single <code>&lt;script&gt;</code> directly where the fact should go.</p>
+      <div className="doc-examples">
+        <pre>
+          <code>{`Did you know 2012 is the year that <script src="http://numbersapi.com/2012/year?write&fragment">
+</script>?`}
+          </code>
+        </pre>
+      </div>
+      <p>
+        Note that this may <a href='https://developer.yahoo.com/performance/rules.html#js_bottom'>degrade page load speed</a>. Live demo on <a href="http://jsfiddle.net/vd58j/">JSFiddle</a>.
+      </p>
       </div>
     </div>
   )
 }
-
-export default UsageExamples;

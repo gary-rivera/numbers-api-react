@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react';
 import Api from './Api'
 import Routes from './Routes'
 import { BrowserRouter } from 'react-router-dom';
-import APIJson from './APIJson'
-const stringLength = window.location.pathname.startsWith('/API') ? 5 : 6
+const stringLength = window.location.pathname.startsWith('/api') ? 5 : 6
 
 function App() {
   const string = window.location.pathname.substr(stringLength);
@@ -29,13 +28,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NumberContext.Provider value={{ currNumberString, numFact, setCurrNumberString, updateCurrNumberString }}>
+      <NumberContext.Provider value={{ json, currNumberString, numFact, setCurrNumberString, updateCurrNumberString }}>
         <div className="App">
-          {json ?
-          <APIJson/>
-          :
           <Routes />
-          }
         </div>
       </NumberContext.Provider>
     </BrowserRouter>

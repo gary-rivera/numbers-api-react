@@ -5,8 +5,8 @@ import NumberContext from '../NumberContext';
 import { Link } from 'react-router-dom';
 
 function SandboxCard() {
-  const {currNumberString, numFact, updateCurrNumberString} = useContext(NumberContext);
-  
+  const {currNumberString, numFact, updateCurrNumberString, json} = useContext(NumberContext);
+
   function handleChange(evt) {
     const {value} = evt.target
     updateCurrNumberString(value)
@@ -39,7 +39,7 @@ function SandboxCard() {
           <div id="search-result" className="api-result">
             <div id="counter"><Counter /> </div>
             <span id="result-temporary-text">
-            {numFact.text}
+            {json ? JSON.stringify(numFact) : numFact.text}
             </span>
           </div>
         <div/>

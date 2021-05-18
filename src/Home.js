@@ -2,9 +2,11 @@ import './Home.css';
 import CategoryContainer from './Category/CategoryContainer';
 import SandboxContainer from './Sandbox/SandboxContainer';
 import Footer from './Footer';
-import APIDocumentation from './APIDocumentation';
+import APIDocumentation from './Documentation/APIDocumentation';
+
 
 function Home() {
+
   return (
     <div className="body-container">
       <div className="inner-container">
