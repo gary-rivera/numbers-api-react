@@ -1,7 +1,19 @@
 import './Counter.css'
 import NumberContext from "../NumberContext"
 import { useContext } from 'react';
-const leapYear = 2020;
+
+/**
+ * Display the current number in context
+ *
+ * Props: 
+ * - None
+ * Context:
+ * - numFact 
+ * - updateCurrNumberString
+ *
+ * SandboxCard -> (Counter)
+ */
+const leapYear = 2020; // any year that has 366 days is suitable
 
 function Counter() {
   const { numFact, updateCurrNumberString } = useContext(NumberContext)
@@ -17,7 +29,7 @@ function Counter() {
       updateCurrNumberString(`${value}/${category}`, true)
     }
   }
-
+  // given a DD/YYYY date, resolve what day of the year 
   function dateFromDay(year, day){
     const date = new Date(year, 0); // initialize a date in `year-01-01`
     const finalDate = new Date(date.setDate(day)); // add the number of days

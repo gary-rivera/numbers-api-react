@@ -1,5 +1,16 @@
 import './TryItOutArrow.css'
 
+/**
+* Image of arrow + 'try it out'
+*
+* Props: 
+* - None
+* State:
+* - None
+*
+*  SanboxContainer -> (TryItOutArrow)
+*/
+
 function TryItOutArrow() {
   return (
     <div>
