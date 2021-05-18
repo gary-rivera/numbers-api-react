@@ -1,17 +1,15 @@
-import ReactMarkdown from 'react-markdown';
+import './APIDocumentation.css';
+import URLStructure from './URLStructure'
+import UsageExamples from './UsageExamples'
 
 function APIDocumentation() {
-  const markdown = `
-  Bring meaning to your metrics and stories to your dates with our API of interesting number facts.
 
-  ## URL Structure
-
-  Just hit <code>http://numbersapi.com/<strong>number</strong>/<strong>type</strong></code> to get a plain text response, where
-  
-`
   return (
-    <div> 
-      <ReactMarkdown children={markdown} />
+    <div id="api-outer"> 
+      <h1> API Reference </h1>
+      <p>Bring meaning to your metrics and stories to your dates with our API of interesting number facts.</p>
+      <URLStructure />
+      <UsageExamples />
     </div>
   )
 }
