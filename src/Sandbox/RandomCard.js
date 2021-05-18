@@ -2,17 +2,6 @@ import { useContext } from 'react';
 import NumberContext from '../NumberContext';
 import './RandomCard.css'
 
-/**
-* A card that links to updating random fact for the given category
-*
-* Props: 
-* - None
-* Context:
-* - updateCurrNumberString
-*
-* SandboxContainer -> (RandomCard)
-*/
-
 function RandomCard() {
   const {updateCurrNumberString} = useContext(NumberContext)
   
@@ -20,7 +9,6 @@ function RandomCard() {
     evt.preventDefault()
     let value = evt.target.innerHTML;
     updateCurrNumberString(value, true);
-    //updates url to append pathname to end of hostname
     window.history.replaceState({}, document.title, `/fact/${value}`)
   }
 

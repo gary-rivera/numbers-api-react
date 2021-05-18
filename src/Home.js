@@ -4,19 +4,6 @@ import SandboxContainer from './Sandbox/SandboxContainer';
 import Footer from './Footer';
 import APIDocumentation from './Documentation/APIDocumentation';
 
-/**
-* Container for all website components
-*
-* Props: 
-* - None
-* State:
-* - None
-*
-*  (Home) -> CategoryContainer
-*         -> SandboxContainer
-*         -> Footer
-*         -> APIDocumentation
-*/    
 
 function Home() {
 

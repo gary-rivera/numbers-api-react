@@ -1,17 +1,6 @@
 import './Footer.css'
 const numShares = 15;
 
-/**
-* Render icons for sharing the website
-*
-* Props: 
-* - None
-* State:
-* - None
-*
-* Home -> (Footer)
-*/
-
 function Footer() {
   
   return (

@@ -4,21 +4,6 @@ import { useContext } from 'react';
 import NumberContext from '../NumberContext';
 import { Link } from 'react-router-dom';
 
-/**
-* Renders search bar, Counter of curr num, and current context fact
-*
-* Props: 
-* - None
-*
-* Context:
-* - currNumberString
-* - numFact
-* - updateCurrNumberString
-* - json
-*
-*  SandboxContainer -> (SandboxCard) -> Counter
-*/
-
 function SandboxCard() {
   const {currNumberString, numFact, updateCurrNumberString, json} = useContext(NumberContext);
 
@@ -27,12 +12,10 @@ function SandboxCard() {
     updateCurrNumberString(value)
   }
   
-  // treat 'Enter' as submit, update context and url
   function handleEnter(evt) {
     if(evt.key === 'Enter') {
       let value = evt.target.value
       updateCurrNumberString(value, true)
-      //updates url to append pathname to end of hostname
       window.history.replaceState({}, document.title, `/fact/${value}`)
     }
   }

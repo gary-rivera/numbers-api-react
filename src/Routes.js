@@ -2,17 +2,6 @@ import {Switch, Route, Redirect} from "react-router-dom"
 import Home from "./Home"
 import APIResponse from "./APIResponse"
 
-/*;
-Routes to either website OR api response
-
-Props: 
-- None
-State:
-- None
-
-(Route) -> Home
-        -> APIResponse
-*/
 
 function Routes() {
   return (

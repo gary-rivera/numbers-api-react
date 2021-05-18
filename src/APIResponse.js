@@ -3,20 +3,6 @@ import { useContext, useEffect } from 'react';
 import NumberContext from './NumberContext';
 import { useParams } from 'react-router-dom';
 
-/**
-* Using url parameter and json context as reference renders the numFact object or just text.
-*
-* Props: 
-* - None
-*
-* Context:
-* - json
-* - numFact
-* - updateCurrNumberString
-*
-* Router -> (APIResponse)
-*/
-
 function APIResponse() {
   const { parameter } = useParams();
   const {numFact, updateCurrNumberString, json} = useContext(NumberContext);
