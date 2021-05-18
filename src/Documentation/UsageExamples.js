@@ -3,7 +3,7 @@
 function UsageExamples() {
   return (
     <div>
-      <h2 id="usage-examples">Usage Examples</h2>
+      <h2 className="doc-section-title" id="usage-examples">Usage Examples</h2>
       <h3 id="jquery">jQuery</h3>
       <div className="Jquery-examples">
         <p>HTML:</p>
@@ -21,10 +21,9 @@ function UsageExamples() {
           </span>
         </div>
         <p>Direct cross-origin requests like this are possible on browsers that support
-          <a href="http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing">
-            CORS
+          <a href="http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing"> CORS
           </a>. Live demo on 
-          <a href="http://jsfiddle.net/divad12/ffHEh/">JSFiddle</a>.
+          <a href="http://jsfiddle.net/divad12/ffHEh/"> JSFiddle</a>.
         </p>
       </div>
       <div className="Jsonp-examples">
